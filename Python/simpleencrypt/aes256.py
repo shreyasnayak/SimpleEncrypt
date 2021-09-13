@@ -30,7 +30,7 @@ __license__   = "MIT"
 from ctypes import *
 CDLL("libcrypto.so.1.1", mode = RTLD_GLOBAL)
 CDLL("libssl.so.1.1", mode = RTLD_GLOBAL)
-lib = cdll.LoadLibrary('libSimpleEncrypt.so')
+lib = cdll.LoadLibrary('/usr/local/lib/libSimpleEncryptCPP.so')
 
 lib.freeme.argtypes = c_void_p,
 lib.freeme.restype = None

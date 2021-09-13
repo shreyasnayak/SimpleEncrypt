@@ -25,7 +25,7 @@ sudo make install
 Installation
 
 ```
-python3 -m pip install
+python3 -m pip install simpleencrypt
 ```
 
 ### Usage
