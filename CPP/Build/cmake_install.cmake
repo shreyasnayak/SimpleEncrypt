@@ -1,4 +1,4 @@
-# Install script for directory: /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP
+# Install script for directory: /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libSimpleEncryptCPP.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libSimpleEncryptCPP.so")
+  if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libSimpleEncrypt.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libSimpleEncrypt.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/usr/local/lib/libSimpleEncryptCPP.so"
+         FILE "$ENV{DESTDIR}/usr/local/lib/libSimpleEncrypt.so"
          RPATH "")
   endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/lib/libSimpleEncryptCPP.so")
+   "/usr/local/lib/libSimpleEncrypt.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build/libSimpleEncryptCPP.so")
-  if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libSimpleEncryptCPP.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libSimpleEncryptCPP.so")
+file(INSTALL DESTINATION "/usr/local/lib" TYPE SHARED_LIBRARY FILES "/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build/libSimpleEncrypt.so")
+  if(EXISTS "$ENV{DESTDIR}/usr/local/lib/libSimpleEncrypt.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/lib/libSimpleEncrypt.so")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/lib/libSimpleEncryptCPP.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/usr/local/lib/libSimpleEncrypt.so")
     endif()
   endif()
 endif()
@@ -73,7 +73,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/include" TYPE FILE FILES "/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/src/base64.h")
+file(INSTALL DESTINATION "/usr/local/include" TYPE FILE FILES "/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/src/base64.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -85,7 +85,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/include" TYPE FILE FILES "/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/src/simpleencrypt.h")
+file(INSTALL DESTINATION "/usr/local/include" TYPE FILE FILES "/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/src/simpleencrypt.h")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -96,5 +96,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

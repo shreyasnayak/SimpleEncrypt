@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP
+CMAKE_SOURCE_DIR = /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build
+CMAKE_BINARY_DIR = /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,17 +79,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -112,6 +101,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -126,9 +126,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build/CMakeFiles /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build/CMakeFiles /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -157,17 +157,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SimpleEncryptCPP
+# Target rules for targets named SimpleEncrypt
 
 # Build rule for target.
-SimpleEncryptCPP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SimpleEncryptCPP
-.PHONY : SimpleEncryptCPP
+SimpleEncrypt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SimpleEncrypt
+.PHONY : SimpleEncrypt
 
 # fast build rule for target.
-SimpleEncryptCPP/fast:
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/build
-.PHONY : SimpleEncryptCPP/fast
+SimpleEncrypt/fast:
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/build
+.PHONY : SimpleEncrypt/fast
 
 src/base64.o: src/base64.cpp.o
 
@@ -175,7 +175,7 @@ src/base64.o: src/base64.cpp.o
 
 # target to build an object file
 src/base64.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/src/base64.cpp.o
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/src/base64.cpp.o
 .PHONY : src/base64.cpp.o
 
 src/base64.i: src/base64.cpp.i
@@ -184,7 +184,7 @@ src/base64.i: src/base64.cpp.i
 
 # target to preprocess a source file
 src/base64.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/src/base64.cpp.i
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/src/base64.cpp.i
 .PHONY : src/base64.cpp.i
 
 src/base64.s: src/base64.cpp.s
@@ -193,7 +193,7 @@ src/base64.s: src/base64.cpp.s
 
 # target to generate assembly for a file
 src/base64.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/src/base64.cpp.s
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/src/base64.cpp.s
 .PHONY : src/base64.cpp.s
 
 src/simpleencrypt.o: src/simpleencrypt.cpp.o
@@ -202,7 +202,7 @@ src/simpleencrypt.o: src/simpleencrypt.cpp.o
 
 # target to build an object file
 src/simpleencrypt.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/src/simpleencrypt.cpp.o
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/src/simpleencrypt.cpp.o
 .PHONY : src/simpleencrypt.cpp.o
 
 src/simpleencrypt.i: src/simpleencrypt.cpp.i
@@ -211,7 +211,7 @@ src/simpleencrypt.i: src/simpleencrypt.cpp.i
 
 # target to preprocess a source file
 src/simpleencrypt.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/src/simpleencrypt.cpp.i
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/src/simpleencrypt.cpp.i
 .PHONY : src/simpleencrypt.cpp.i
 
 src/simpleencrypt.s: src/simpleencrypt.cpp.s
@@ -220,7 +220,7 @@ src/simpleencrypt.s: src/simpleencrypt.cpp.s
 
 # target to generate assembly for a file
 src/simpleencrypt.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/src/simpleencrypt.cpp.s
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/src/simpleencrypt.cpp.s
 .PHONY : src/simpleencrypt.cpp.s
 
 # Help Target
@@ -231,10 +231,10 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... edit_cache"
-	@echo "... SimpleEncryptCPP"
-	@echo "... rebuild_cache"
+	@echo "... SimpleEncrypt"
 	@echo "... list_install_components"
 	@echo "... install/local"
+	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... src/base64.o"
 	@echo "... src/base64.i"

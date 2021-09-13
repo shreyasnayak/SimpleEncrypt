@@ -9,12 +9,12 @@ SimpleEncrypt Python package has a dependency on C++ shared library. Before runn
 ## Build and install C++ shared library
 
 - Install dependencies `sudo apt-get install libssl-dev openssl`
-- Download or clone simple encrypt [C++ shared library](https://github.com/shreyasnayak/SimpleEncrypt/tree/main/SimpleEncrypt_Python/CPP_Library)
+- Download or clone simple encrypt [C++ shared library](https://github.com/shreyasnayak/SimpleEncrypt/tree/main/CPP)
 - Compile and install
 
 ```
-mkdir SimpleEncrypt_Python/CPP_Library/Build
-cd SimpleEncrypt_Python/CPP_Library/Build
+git clone https://github.com/shreyasnayak/SimpleEncrypt
+mkdir CPP/Build && cd CPP/Build
 cmake ..
 make
 sudo make install

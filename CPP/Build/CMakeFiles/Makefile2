@@ -59,45 +59,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP
+CMAKE_SOURCE_DIR = /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build
+CMAKE_BINARY_DIR = /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build
 
 #=============================================================================
-# Target rules for target CMakeFiles/SimpleEncryptCPP.dir
+# Target rules for target CMakeFiles/SimpleEncrypt.dir
 
 # All Build rule for target.
-CMakeFiles/SimpleEncryptCPP.dir/all:
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/depend
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build/CMakeFiles --progress-num=1,2,3 "Built target SimpleEncryptCPP"
-.PHONY : CMakeFiles/SimpleEncryptCPP.dir/all
+CMakeFiles/SimpleEncrypt.dir/all:
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/depend
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build/CMakeFiles --progress-num=1,2,3 "Built target SimpleEncrypt"
+.PHONY : CMakeFiles/SimpleEncrypt.dir/all
 
 # Include target in all.
-all: CMakeFiles/SimpleEncryptCPP.dir/all
+all: CMakeFiles/SimpleEncrypt.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SimpleEncryptCPP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SimpleEncryptCPP.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/SimpleEncrypt_CPP/Build/CMakeFiles 0
-.PHONY : CMakeFiles/SimpleEncryptCPP.dir/rule
+CMakeFiles/SimpleEncrypt.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SimpleEncrypt.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shreyas/My_Documents/OpenSource/SimpleEncrypt/CPP/Build/CMakeFiles 0
+.PHONY : CMakeFiles/SimpleEncrypt.dir/rule
 
 # Convenience name for target.
-SimpleEncryptCPP: CMakeFiles/SimpleEncryptCPP.dir/rule
+SimpleEncrypt: CMakeFiles/SimpleEncrypt.dir/rule
 
-.PHONY : SimpleEncryptCPP
-
-# clean rule for target.
-CMakeFiles/SimpleEncryptCPP.dir/clean:
-	$(MAKE) -f CMakeFiles/SimpleEncryptCPP.dir/build.make CMakeFiles/SimpleEncryptCPP.dir/clean
-.PHONY : CMakeFiles/SimpleEncryptCPP.dir/clean
+.PHONY : SimpleEncrypt
 
 # clean rule for target.
-clean: CMakeFiles/SimpleEncryptCPP.dir/clean
+CMakeFiles/SimpleEncrypt.dir/clean:
+	$(MAKE) -f CMakeFiles/SimpleEncrypt.dir/build.make CMakeFiles/SimpleEncrypt.dir/clean
+.PHONY : CMakeFiles/SimpleEncrypt.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/SimpleEncrypt.dir/clean
 
 .PHONY : clean
 
