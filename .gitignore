@@ -1,4 +1,4 @@
-SimpleEncrypt_Python/CPP_Library/Build
-SimpleEncrypt_Python/Python_Package/build
-SimpleEncrypt_Python/Python_Package/dist
-SimpleEncrypt_Python/Python_Package/simpleencrypt.egg-info
+CPP/Build
+Python/build
+Python/dist
+Python/simpleencrypt.egg-info

@@ -1,3 +1,0 @@
-/usr/local/lib/libSimpleEncrypt.so
-/usr/local/include/base64.h
-/usr/local/include/simpleencrypt.h
