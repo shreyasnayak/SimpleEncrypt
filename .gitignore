@@ -2,3 +2,4 @@ CPP/Build
 Python/build
 Python/dist
 Python/simpleencrypt.egg-info
+CPP_QMAKE/SimpleEncrypt.pro.user
