@@ -20,7 +20,7 @@ make
 sudo make install
 ```
 
-# Install python package SimpleEncrypt
+# Install python package [SimpleEncrypt](https://pypi.org/project/simpleencrypt/)
 
 Installation
 
