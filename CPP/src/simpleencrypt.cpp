@@ -1,12 +1,10 @@
 #include "simpleencrypt.h"
 
 
-
-
 void SimpleEncrypt::handleErrors(void)
 {
+    std::cout << "There is an error in encrypting/decrypting message" << std::endl;
     ERR_print_errors_fp(stderr);
-    abort();
 }
 
 int SimpleEncrypt::encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,unsigned char *iv, unsigned char *ciphertext)
