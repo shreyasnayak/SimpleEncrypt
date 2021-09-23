@@ -33,15 +33,15 @@ python3 -m pip install simpleencrypt
 ```python
 from simpleencrypt import aes256
 
-# encryption
-iv = b'171A065A7675A09AECEC118DBC008A822A041FC2EBF2B3E4CF7A4C966E5D5897'
-key = b'2B5442AD8739992F'
+AES_KEY = b'171A065A7675A09AECEC118DBC008A822A041FC2EBF2B3E4CF7A4C966E5D5897'
+AES_IV = b'2B5442AD8739992F'
 plainText = b'Hello World'
-encrypted = aes256.encrypt(plainText,iv,key)
+
+# encryption
+encrypted = aes256.encrypt(plainText,AES_KEY,AES_IV)
 print(encrypted)
 
 # decryption
-iv = b'171A065A7675A09AECEC118DBC008A822A041FC2EBF2B3E4CF7A4C966E5D5897'
-key = b'2B5442AD8739992F'
-print(aes256.decrypt(encrypted,iv,key))
+decrypted = aes256.decrypt(encrypted,AES_KEY,AES_IV)
+print(decrypted)
 ```

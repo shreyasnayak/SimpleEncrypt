@@ -41,34 +41,34 @@ lib.encryptMessage.restype = c_void_p
 lib.decryptMessage.argtypes = [c_char_p,c_char_p,c_char_p]
 lib.decryptMessage.restype = c_void_p
 
-def encrypt(plainText,iv,key):
+def encrypt(plainText,key,iv):
     """
     Encrypt text with the initiation vector and key
     @param plainText: string Text to encrypt
-    @param iv: string initiation vector
     @param key: string key
+    @param iv: string initiation vector
     @type plainText: string
-    @type iv: string
     @type key: string
+    @type iv: string
     @rtype: string
     """
-    en_ptr = lib.encryptMessage(c_char_p(plainText),c_char_p(iv),c_char_p(key))
+    en_ptr = lib.encryptMessage(c_char_p(plainText),c_char_p(key),c_char_p(iv))
     value = cast(en_ptr, c_char_p).value
     lib.freeme(en_ptr)
     return value
 
-def decrypt(ciphertext,iv,key):
+def decrypt(ciphertext,key,iv):
     """
     Encrypt text with the initiation vector and key
     @param ciphertext: string ciphertext to decrypt
-    @param iv: string initiation vector
     @param key: string key
-    @type plainText: string
-    @type iv: string
+    @param iv: string initiation vector
+    @type ciphertext: string
     @type key: string
+    @type iv: string
     @rtype: string
     """
-    de_ptr = lib.decryptMessage(c_char_p(ciphertext),c_char_p(iv),c_char_p(key))
+    de_ptr = lib.decryptMessage(c_char_p(ciphertext),c_char_p(key),c_char_p(iv))
     value = cast(de_ptr, c_char_p).value
     lib.freeme(de_ptr)
     return value
@@ -78,4 +78,4 @@ if __name__ == '__main__':
     iv = b'171A065A7675A09AECEC118DBC008A822A041FC2EBF2B3E4CF7A4C966E5D5897'
     key = b'2B5442AD8739992F'
     plainText = b'TEXT'
-    print(decrypt(encrypt(plainText, iv,key), iv,key))
+    print(decrypt(encrypt(plainText,key, iv),key,iv))
